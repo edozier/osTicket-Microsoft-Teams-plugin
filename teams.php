@@ -232,6 +232,7 @@ class TeamsPlugin extends Plugin {
                     'activityTitle' => ($ticket->getName() ? $ticket->getName() : 'Guest ') . ' (sent by ' . $ticket->getEmail() . ')',
                     'activitySubtitle' => $ticket->getUpdateDate(),
                     'activityImage' => $this->get_gravatar($ticket->getEmail()),
+                    'activityText' => 'Last Message: ' . $ticket->getLastMessage(),
                 ],
             ],
             'potentialAction' => [
